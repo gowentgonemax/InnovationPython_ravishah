@@ -1,13 +1,20 @@
+import time
 def DecisionMaking1():
-   userInput = int(input('Enter the number to see result: '))
-   if userInput%3 == 0 and userInput%5 == 0:
+    print('*****First question DecisionMaking1*****')
+    userInput = int(input('Enter the number to see result: '))
+    if userInput%3 == 0 and userInput%5 == 0:
        print('ConsultAdd - Python Trainning')
-   elif userInput%3 == 0:
+    elif userInput%3 == 0:
        print('Consultadd')
-   elif userInput%5 == 0:
+    elif userInput%5 == 0:
        print('Python Trainning')
+    else:
+       print('The given number is not divisible of multiple of 3 and 5')
 
 def DecisionMaking2():
+    message()
+    print('*****DecisionMaking2*****')
+
     result = 0
     num1 = int(input('Enter the first number: '))
     num2 = int(input('Enter the 2nd number: '))
@@ -37,6 +44,8 @@ def DecisionMaking2():
         print('Negative')
 
 def FlowChart():
+    message()
+    print('*****Flow Chart*****')
     a,b,c = 10,20,30
     avg = (a+b+c)/3
     print('a,b,c')
@@ -64,6 +73,8 @@ def FlowChart():
                                 print('Average is just higher than C')
 
 def BreakContinue():
+    print('*****Using break and continue statement*****')
+    message()
     valid = True
     while valid:
         num = int(input('Enter your number: '))
@@ -76,10 +87,15 @@ def BreakContinue():
             continue
 
 def DivisibleBySevenButNotByFive():
+    print('********Divisible By Seven But Not By Five*********')
+    message()
     for i in range(2000,3200):
         if i%7 ==0 and i%5 != 0 :
             print(i)
+
 def ShowOutPut():
+    print('*****Showing output')
+    message()
     x = 123
     # for i in x:
     #     print(i)
@@ -100,10 +116,14 @@ def ShowOutPut():
             break
 
 def PrintNumber():
+    print('****Print Number*****')
+    message()
     for i in range(1,6):
         if i != 3 and i!= 6:
             print(i)
 def CountChar():
+    print('*******Count the character or Digit Countchar()*******')
+    message()
     s = 'consul72'
     numCounter = 0
     charCounter = 0
@@ -118,6 +138,8 @@ def CountChar():
     print('The number of Digit in given String is :',charCounter)
 
 def GuessLuckyNumber1():
+    print('*****Guess Lucky Number 1 question********')
+    message()
     luckyNumber =10
     isFound = False
     while isFound != True:
@@ -128,6 +150,8 @@ def GuessLuckyNumber1():
         else:
             print('Try again.')
 def GuessLuckyNumber2():
+    print('*****Guess Lucky Number 2nd question********')
+    message()
     luckyNumber = 10
     answer = 'yes'
     while answer !='no':
@@ -145,24 +169,59 @@ def GuessLuckyNumber2():
 
 
 def GuessTillFiveTimes():
-   pass
+    print('******Guess Till Five Times*******')
+    counter = 1
+    i = 1
+    luckyNumb = 10
+    while i != 6:
+        num = int(input('Guess the answer : '))
+        if num == luckyNumb:
+            print('Good Guess')
+        else:
+            if i == 5:
+                print('*****Game over******')
+            else:
+                print('Try again.')
+        i += 1
+def GuessTillFiveTimes2():
+    print('******Guess Till Five Times 2nd ******')
+    counter = 1
+    i = 1
+    luckyNumb = 10
+    while i != 6:
+        num = int(input('Guess the answer : '))
+        if num == luckyNumb:
+            print('Good Guess')
+            break
+        else:
+            if i == 5:
+                print('Sorry but that was not very successful.')
+            else:
+                print('Try again.')
+        i += 1
 
 
 
+
+
+def message():
+    print('\n')
+    time.sleep(2)
 
 
 if __name__ == "__main__":
-    #DecisionMaking1()
-    #DecisionMaking2()
-    #FlowChart()
-    #BreakContinue()
-    #DivisibleBySevenButNotByFive()
-    #ShowOutPut()
-    #PrintNumber()
-    #CountChar()
-    #GuessLuckyNumber1()
+    DecisionMaking1()
+    DecisionMaking2()
+    FlowChart()
+    BreakContinue()
+    DivisibleBySevenButNotByFive()
+    ShowOutPut()
+    PrintNumber()
+    CountChar()
+    GuessLuckyNumber1()
     GuessLuckyNumber2()
     GuessTillFiveTimes()
+    GuessTillFiveTimes2()
 
 
 
