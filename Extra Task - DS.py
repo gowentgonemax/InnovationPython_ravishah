@@ -34,3 +34,9 @@ for i in givenString:
 print('6.Write a program in Python to iterate through the string “hello my name is abcde” and print the string which '
       'is having an even length.')
 myString = "hello my name is abcde"
+fileteredString = ''
+myList = myString.split(' ')
+print('The filtered String is: ')
+for i in myList:
+    if len(i)%2 == 0:
+        print(i,end=' ')
